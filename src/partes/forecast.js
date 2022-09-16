@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import '../index.css';
-import api from './api';
 
 // Aqui são mostradas as previsões dos próximos 5 dias
 

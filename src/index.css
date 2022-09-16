@@ -1,63 +1,10 @@
-@media (min-width: 576px) {
-    body {
-        background-color: red;
-    }
-}
-
-@media (min-width: 768px) {
-    body {
-        background-color: yellow;
-    }
-}
-
-@media (min-width: 992px) {
-    body {
-        background-color: green;
-    }
-}
-
-@media (min-width: 1200px) {
-    body {
-        background-color: rgb(0, 43, 95);
-    }
-
-    .main .data, .main .localizacao {
-        font-size: .9rem;
-    }
-
-    /* imagem */
-    .main .imagem img{
-        width: 250px;
-        height: 250px;
-    }
-
-    .main .infos {  
-        font-size: 1.25rem;
-    }
-
-    .main .temp-atual {
-        font-size: 5rem;
-    }
-
-    .main .maxmin {    
-        gap: 1.25rem;
-        font-size: 2rem;
-    }
-
-    .main .maxmin svg {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-}
-
-
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -88,6 +35,7 @@ body {
     position: absolute;
     left: 5px;
     margin: 10px;
+    font-size: .9rem;
 }
 
 /* indicador de localização */
@@ -96,6 +44,7 @@ body {
     right: 5px;
     margin: 10px;
     display: flex;
+    font-size: .9rem;
 }
 
 .main .localizacao .ionicon {
@@ -103,6 +52,12 @@ body {
     height: 20px;
     fill: white;
     margin: 0 3px 0 0;
+}
+
+/* imagem */
+.main .imagem img{
+    width: 250px;
+    height: 250px;
 }
 
 /* informações da parte principal */
@@ -116,11 +71,12 @@ body {
     width: 75%;
     height: 96vh;
     text-align: left;
+    font-size: 1.25rem;
 }
 
 .main .vento, .main .umidade, .main .visibilidade, .main .pressao {
     width: 100%;
-    margin: 0 0 0 10%;
+    margin: 0 0 0 20px;
 }
 
 /* tempo */
@@ -137,9 +93,20 @@ body {
     margin: 0 0 1.5rem 0;
 }
 
+.main .temp-atual {
+    font-size: 5rem;
+}
+
 .main .maxmin {
     display: flex;
     flex-direction: column;
+    gap: 1.25rem;
+    font-size: 2rem;
+}
+
+.main .maxmin svg {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .main .maxmin svg rect {
@@ -178,7 +145,7 @@ body {
 /* ----- Previsões(Forecast) ----- */
 /* geral */
 .forecast {
-    background: rgb(0, 33, 73);
+    background: rgba(0, 43, 95, 0.6);
     width: 67%;
     height: 100vh;
     color: rgb(245, 245, 245);;
@@ -279,7 +246,7 @@ body {
 }
 
 .dropdown > .link:focus + .dropdownMenu,
-.dropdownMenu:hover {
+.dropdownMenu:hover, .dropdownMenu:focus-within {
     opacity: 1;
     pointer-events: auto;
 }

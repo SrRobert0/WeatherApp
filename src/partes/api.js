@@ -157,15 +157,15 @@ const api = {
                 let data = new Date(day.current.dt * 1000); // Data
                 let icone = day.current.weather[0].icon; // Ícone do clima
                 let clima = day.current.weather[0].description; // Descrição do clima
-                let tempAtual = day.current.temp.toFixed(1);
-                let tempMax = day.daily[0].temp.max.toFixed(1);
-                let tempMin = day.daily[0].temp.min.toFixed(1);
-                let velVento = day.current.wind_speed;
-                let angVento = day.current.wind_deg;
-                let umidade = day.current.humidity;
-                let visibilidade = day.current.visibility / 1000; 
-                let pressao = day.current.pressure;
-                let direcaoVento;
+                let tempAtual = day.current.temp.toFixed(1); // Temperatura atual
+                let tempMax = day.daily[0].temp.max.toFixed(1); // Temperatura máxima
+                let tempMin = day.daily[0].temp.min.toFixed(1); // Temperatura mínima
+                let velVento = day.current.wind_speed; // Velocidade do vento
+                let angVento = day.current.wind_deg; // Direção do vento, em graus
+                let umidade = day.current.humidity; // Umidade do ar
+                let visibilidade = day.current.visibility / 1000; // Visibilidade
+                let pressao = day.current.pressure; // Pressão Atmosférica 
+                let direcaoVento; // Direção do vento
 
                 // Estrutura de condição para determinar a direção do vento por meio do ângulo.
 
@@ -341,10 +341,10 @@ const api = {
         previsoes.innerHTML = dados.daily.map((day, id) => {
             if (id !== 0 && id <= 5) {
                 let data = new Date(day.dt * 1000); // Data
-                let icone = day.weather[0].icon;
-                let tempMax = day.temp.max.toFixed(1);
-                let tempMin = day.temp.min.toFixed(1);
-                let clima = day.weather[0].description;
+                let icone = day.weather[0].icon; // Ícone do clima
+                let tempMax = day.temp.max.toFixed(1); // Temperatura máxima
+                let tempMin = day.temp.min.toFixed(1); // Temperatura mínima
+                let clima = day.weather[0].description; // Descrição do clima
 
                 // Traduzindo a data.
 
