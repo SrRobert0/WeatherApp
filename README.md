@@ -36,11 +36,12 @@ Antes de iniciar o projeto é importante que você vá no site do [OpenWheater](
 > ### `16/09/22`
 > + Adicionada a tradução para o português do dia e do mês nas datas apresentadas.
 > + Agora a barra de busca só some ao clicar em algo fora dela. Isso facilita a pesquisa já que assim a barra não fica invisível enquanto está digitando.
-> + Separei todas as informações que são retiradas da API no início do map() e documentei o que é cada uma delas, pra facilitar o entendimento do código.
+> + Separei todas as informações que são retiradas da API no início do map() e documentei o que cada uma delas armazena, pra facilitar o entendimento do código.
 
 ## O que pretendo melhorar:
 
 + Deixar o site responsivo. 
 + Melhorar o design.
 + Permitir a escolha de linguagem no site.
++ Otimizar o código.
 + Encontrar um nome melhor para o projeto...
