@@ -1,5 +1,3 @@
-# Desafio Concluído
-
 ## Primeiro projeto em React
 
 Essa foi uma aplicação bem simples que fiz em React. <br>
