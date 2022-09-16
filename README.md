@@ -25,7 +25,7 @@ Há um problema recorrente nessa API, no qual várias cidades aparecem com o nom
 
 ### `npm install` 
 
-Antes de iniciar o projeto é importante que você vá no site do [OpenWheater](https://openweathermap.org/api) e crie uma conta para ter acesso a chave da API. A chave pode ser colocado em um arquivo separado para ser importada como um váriavel que será colocada no link de requisição da API ou também pode ser colocada diretamente no link, depende da sua preferência.
+Antes de iniciar o projeto é importante que você vá no site do [OpenWheater](https://openweathermap.org/api) e crie uma conta para ter acesso a chave da API. A chave pode ser colocado em um arquivo separado para ser importada como um váriavel que será colocada no link de requisição da API ou também pode ser colocada diretamente no arquivo, depende da sua preferência.
 
 ### Para iniciar o projeto:
 
