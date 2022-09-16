@@ -7,7 +7,7 @@ E além disso, o front-end ficou bem fraquinho. Nunca fui bom em front-end.
 Fiz esse projeto com o objetivo de completar um desafio e, com isso, acabei aprendendo muito sobre React e como consumir APIs.
 
 
-## Requisitos para rodar o projeto
+## Como utilizar o projeto
 
 Para instalar as dependências do projeto: 
 ### `npm install`
