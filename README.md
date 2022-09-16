@@ -3,15 +3,6 @@
 Essa é uma aplicação bem simples feita em React para fins de aprendizado. <br>
 Esse projeto foi feito anteriormente com o objetivo de completar um desafio, mas agora irei aproveita-lo para aperfeiçoar as minhas habilidades e o proprio projeto com melhorias que farei de vez em quando.
 
-
-## Como utilizar o projeto
-
-Para instalar as dependências do projeto: 
-### `npm install`
-
-Para rodar o projeto:
-### `npm start`
-
 ## Descrição do projeto
 
 O projeto é um site que permite mostrar o clima atual de uma cidade, além da previsão de até os proximos 5 dias. <br>
@@ -26,6 +17,14 @@ Obs: A data está com o dia da semana e o mês em inglês e não consegui achar 
 A API utilizada foi a da <a href="https://openweathermap.org/api">OpenWheater</a> <br>
 Escolhi ela pois foi a mais completa que consegui encontrar, além de que a mesma é gratis e que tem um limite de requisições bem "extenso".
 Acabei deixando a key da minha conta no código pois não pretendo utiliza-lo mais, mas recomendo que faça uma conta e coloque sua própria key se for utilizar a mesma API em algum projeto.
+
+## Como utilizar o projeto
+
+Para instalar as dependências do projeto: 
+### `npm install`
+
+Para rodar o projeto:
+### `npm start`
 
 ## Como funciona o código
 Essa parte eu deixei documentada no código.
