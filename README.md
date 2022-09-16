@@ -4,7 +4,7 @@ Essa é uma aplicação bem simples feita em React para fins de aprendizado. <br
 Utilizei poucos recursos e, como sou iniciante, devo ter cometido vários erros. <br>
 E além disso, o front-end ficou bem fraquinho. Nunca fui bom em front-end.
 
-Fiz esse projeto com o objetivo de completar um desafio e estou aproveitando para aperfeiçoar tanto as minhas habilidades quanto o proprio projeto com melhorias que serão feitas de vez em quando.
+Fiz esse projeto anteriormente com o objetivo de completar um desafio e estou aproveitando para aperfeiçoar tanto as minhas habilidades quanto o proprio projeto com melhorias que serão feitas de vez em quando.
 
 
 ## Como utilizar o projeto
