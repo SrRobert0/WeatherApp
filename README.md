@@ -1,6 +1,6 @@
-# Primeiro projeto em React
+# Projeto em React
 
-Essa foi uma aplicação bem simples que fiz em React. <br>
+Essa é uma aplicação bem simples feita em React para fins de aprendizado. <br>
 Utilizei poucos recursos e, como sou iniciante, devo ter cometido vários erros. <br>
 E além disso, o front-end ficou bem fraquinho. Nunca fui bom em front-end.
 
