@@ -1,4 +1,4 @@
-## Primeiro projeto em React
+# Primeiro projeto em React
 
 Essa foi uma aplicação bem simples que fiz em React. <br>
 Utilizei poucos recursos e, como sou iniciante, devo ter cometido vários erros. <br>
