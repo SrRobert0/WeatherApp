@@ -1,9 +1,9 @@
-// Consumi a API OpenWheater, pois além de ser grátis e não ter limites diários de requisição, permitia pegar previsões de até uma semana afrente. Eu só mostrei 5 previsões pois
-// achei que seria desnecessário mostrar mais.
+// Aqui estão todas a funções responsáveis por fazer as requisições da API
 
-// Coloque a sua Key do OpenWeather dentro das variáveis "keyAPI"
+const keyAPI = '5dee83e7d5ca0fb40543746683e00655'; // Coloque a chave da API aqui
 
 const api = {
+    
     climas: () => {
         // Essa função é executada quando o site inicia. 
 
@@ -20,7 +20,7 @@ const api = {
         function setPositionInit (position) {
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            let keyAPI = '5dee83e7d5ca0fb40543746683e00655';
+             
             let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${keyAPI}&units=metric&lang=pt_br`
 
         // Aqui é feita a chamada da API.    
@@ -49,7 +49,7 @@ const api = {
         function setCidade (position) {
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            let keyAPI = '5dee83e7d5ca0fb40543746683e00655';
+
             let sUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${keyAPI}&units=metric&lang=pt_br`
 
             // Aqui é feita a chamada da API.
@@ -77,7 +77,7 @@ const api = {
 
         let q = document.getElementById('q');
         let cidade = q.value;
-        let keyAPI = '5dee83e7d5ca0fb40543746683e00655';
+
         let url = `http://api.openweathermap.org/geo/1.0/direct?q=${cidade}&appid=${keyAPI}`
 
         // Aqui é feita a chamada da API.   
@@ -98,7 +98,7 @@ const api = {
         dados.map((dado) => {
             let lat = dado.lat;
             let lon = dado.lon;
-            let keyAPI = '5dee83e7d5ca0fb40543746683e00655'
+
             let sUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${keyAPI}&units=metric&lang=pt_br`
 
             // Aqui é feita a chamada da API.   
@@ -120,8 +120,6 @@ const api = {
     },
     cidadePesquisada: (lat, lon) => {
             // Mostra o nome da cidade que está sendo pesquisada por meio da latitude e longitude que foram recebidas do array.
-
-            let keyAPI = '5dee83e7d5ca0fb40543746683e00655';
 
             let sUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${keyAPI}&units=metric&lang=pt_br`
 
