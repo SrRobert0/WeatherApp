@@ -1,6 +1,6 @@
 // Aqui estão todas a funções responsáveis por fazer as requisições da API
 
-const keyAPI = '5dee83e7d5ca0fb40543746683e00655'; // Coloque a chave da API aqui
+const keyAPI = ''; // Coloque a chave da API aqui
 
 const api = {
     
