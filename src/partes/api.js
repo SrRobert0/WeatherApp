@@ -78,7 +78,7 @@ const api = {
         let q = document.getElementById('q');
         let cidade = q.value;
 
-        let url = `http://api.openweathermap.org/geo/1.0/direct?q=${cidade}&appid=${keyAPI}`
+        let url = `https://api.openweathermap.org/geo/1.0/direct?q=${cidade}&appid=${keyAPI}`
 
         // Aqui é feita a chamada da API.   
 
