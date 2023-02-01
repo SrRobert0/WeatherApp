@@ -223,7 +223,7 @@ function App() {
               <>
                 <div className="forecast d-flex flex-column align-items-center">
                   {data.daily.map((day, key) => {
-                    if (key < 5) {
+                    if (key >= 1 && key < 6) {
                       let temp = new Date(day.dt * 1000);
                       let tDay, tMonth, month, fDay, dayNumber, year, translated;
 
