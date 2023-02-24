@@ -38,6 +38,9 @@ Antes de iniciar o projeto é importante que você vá no site do [OpenWheater](
 > + Agora a barra de busca só desaparece ao clicar em algo fora dela. Isso facilita a pesquisa já que assim a barra não fica invisível enquanto está digitando.
 > + Separei todas as informações que são retiradas da API no início do map() e documentei o que cada uma delas armazena, pra facilitar o entendimento do código.
 
+> ### `01/02/23`
+> + Desenvolvendo changelog...
+
 ## O que pretendo melhorar:
 
 + Deixar o site responsivo. 
