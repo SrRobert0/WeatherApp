@@ -61,7 +61,9 @@ Antes de iniciar o projeto é importante que você vá no site do [OpenWeather](
 > - Removi alguns arquivos do projeto que não eram mais utilizados.
 
 > ### `01/02/23`
-> + Desenvolvendo changelog...
+>
+> - Agora é possível acessar os dados do clima de uma cidade pesquisando-a pelo seu nome.
+> - Removi alguns arquivos do projeto que não eram mais utilizados.
 
 ## O que pretendo melhorar:
 
