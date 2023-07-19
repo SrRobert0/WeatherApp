@@ -1,4 +1,4 @@
-# Projeto Wheater-App
+# Projeto Weather-App
 
 Essa é uma aplicação bem simples feita em React para fins de aprendizado. Esse projeto foi feito anteriormente com o objetivo de completar um desafio, mas agora irei aproveita-lo para aperfeiçoar as minhas habilidades e o próprio projeto com melhorias que farei de vez em quando. <br>
 
@@ -14,7 +14,7 @@ Nas previsões dos próximos 5 dias, é mostrado a data, o ícone referente ao c
 
 ## API
 
-A API utilizada foi a do [OpenWheater](https://openweathermap.org/api). <br>
+A API utilizada foi a do [OpenWeather](https://openweathermap.org/api). <br>
 Escolhi ela pois foi a mais completa que consegui encontrar, além de que ela é gratis e que tem um limite de requisições bem "extenso".
 
 Há um problema recorrente nessa API, no qual várias cidades aparecem com o nome de cidades proximas ao invés do seu próprio. Tenho como exemplo Jardim, a cidade onde moro, que aparece com o nome de Barbalha. Como esse é um "erro" da API, não tive como resolver.
@@ -33,7 +33,7 @@ Há um problema recorrente nessa API, no qual várias cidades aparecem com o nom
 
 ### `npm install`
 
-Antes de iniciar o projeto é importante que você vá no site do [OpenWheater](https://openweathermap.org/api) e crie uma conta para ter acesso a chave da API. A chave pode ser colocado em um arquivo separado para ser importada como um váriavel que será colocada no link de requisição da API ou também pode ser colocada diretamente no arquivo, depende da sua preferência.
+Antes de iniciar o projeto é importante que você vá no site do [OpenWeather](https://openweathermap.org/api) e crie uma conta para ter acesso a chave da API. A chave pode ser colocado em um arquivo separado para ser importada como um váriavel que será colocada no link de requisição da API ou também pode ser colocada diretamente no arquivo, depende da sua preferência.
 
 ### Para iniciar o projeto:
 
@@ -59,6 +59,9 @@ Antes de iniciar o projeto é importante que você vá no site do [OpenWheater](
 >
 > - Agora é possível acessar os dados do clima de uma cidade pesquisando-a pelo seu nome.
 > - Removi alguns arquivos do projeto que não eram mais utilizados.
+
+> ### `01/02/23`
+> + Desenvolvendo changelog...
 
 ## O que pretendo melhorar:
 
