@@ -1,1 +1,1 @@
-export default "" // Ponha a chave da Api dentro das aspas
+export default "5dee83e7d5ca0fb40543746683e00655"; // Ponha a chave da Api dentro das aspas
