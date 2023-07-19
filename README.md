@@ -55,6 +55,11 @@ Antes de iniciar o projeto é importante que você vá no site do [OpenWheater](
 > - Pequena melhoria na responsividade.
 > - Mudança no metódo de requisição da API: Agora, ao invés de utilizar o fetch, estou utilizando a biblioteca Axios para fazer as requisições.
 
+> ### `19/07/23`
+>
+> - Agora é possível acessar os dados do clima de uma cidade pesquisando-a pelo seu nome.
+> - Removi alguns arquivos do projeto que não eram mais utilizados.
+
 ## O que pretendo melhorar:
 
 - Deixar o site responsivo.
