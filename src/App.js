@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { BsFillArrowUpCircleFill, BsSearch } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { CircleLoader } from "react-spinners";
 import axios from "axios";
@@ -11,7 +11,8 @@ function App() {
   const [dataIsLoading, setDataIsLoading] = useState(true);
   const [cityIsLoading, setCityIsLoading] = useState(true);
   const [data, setData] = useState();
-  const [city, setCity] = useState();
+  const [searchCityName, setSearchCityName] = useState("");
+  const [cityName, setCityName] = useState();
   const [actData, setActDate] = useState();
 
   useEffect(() => {
@@ -22,12 +23,12 @@ function App() {
     MountUrl();
   }
 
-  async function GetCity(position) {
+  async function GetCityName(position) {
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${ApiKey}&units=metric&lang=pt_br`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=${ApiKey}&units=metric&lang=pt_br`
       );
-      setCity(response.data.name);
+      setCityName(response.data.name);
 
       setCityIsLoading(false);
     } catch (error) {
@@ -35,28 +36,56 @@ function App() {
     }
   }
 
+  async function GetCityPositionByName() {
+    if (searchCityName === "") {
+      return;
+    }
+
+    try {
+      const response = await axios.get(
+        `https://api.openweathermap.org/geo/1.0/direct?q=${searchCityName}&appid=${ApiKey}`
+      );
+
+      const cityPosition = {
+        coords: {
+          latitude: response.data[0].lat,
+          longitude: response.data[0].lon,
+        },
+      };
+
+      GetCityData(cityPosition);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   async function MountUrl() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(GetLocation);
+      navigator.geolocation.getCurrentPosition(GetCityData);
     } else {
       console.log("deu erro aqui cara...");
     }
   }
 
-  async function GetLocation(position) {
-    GetCity(position);
+  async function GetCityData(position) {
+    const cityPosition = {
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+    };
+
+    GetCityName(cityPosition);
 
     try {
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${ApiKey}&units=metric&lang=pt_br`
       );
-      console.log(response.data);
+
       setData(response.data);
       TranslateDay(response.data.current.dt);
 
       setDataIsLoading(false);
-    } catch (error) {
-      console.log("Erro na requisição da Api: Data " + error);
+    } catch (err) {
+      console.log("Erro na requisição da Api: Data " + err);
     }
   }
 
@@ -146,7 +175,23 @@ function App() {
     <div className="container-fluid d-flex flex-column">
       <main>
         <header className="header d-flex align-items-center">
-          <input type="text" className="input-search me-3 px-3 py-1" />
+          <div className="input-group search-bar mx-3">
+            <input
+              type="text"
+              className="input-search form-control px-3 py-1"
+              onChange={(e) => {
+                setSearchCityName(e.target.value);
+              }}
+            />
+            <button
+              className="btn btn-dark py-1 px-2"
+              onClick={() => {
+                GetCityPositionByName();
+              }}
+            >
+              <BsSearch color="#000" />
+            </button>
+          </div>
         </header>
         <div className="main d-flex">
           <div className="left-content d-flex align-items-center justify-content-center">
@@ -160,7 +205,7 @@ function App() {
                     <p className="mt-1 ms-3">Hoje - {actData}</p>
                     <p className="mt-1 mx-3 d-flex align-items-end">
                       <MdLocationOn color="#f1f1f1" size={25} />
-                      {city}
+                      {cityName}
                     </p>
                   </div>
 
@@ -217,7 +262,7 @@ function App() {
           </div>
           <div className="right-content d-flex align-items-center justify-content-center">
             {(cityIsLoading || dataIsLoading) && (
-              <CircleLoader color="#f1f1f1" className="right-loader"/>
+              <CircleLoader color="#f1f1f1" className="right-loader" />
             )}
             {!cityIsLoading && !dataIsLoading && (
               <>
@@ -225,7 +270,13 @@ function App() {
                   {data.daily.map((day, key) => {
                     if (key >= 1 && key < 6) {
                       let temp = new Date(day.dt * 1000);
-                      let tDay, tMonth, month, fDay, dayNumber, year, translated;
+                      let tDay,
+                        tMonth,
+                        month,
+                        fDay,
+                        dayNumber,
+                        year,
+                        translated;
 
                       temp = temp.toDateString();
                       fDay = temp.substring(0, 3);
