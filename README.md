@@ -60,10 +60,9 @@ Antes de iniciar o projeto é importante que você vá no site do [OpenWeather](
 > - Agora é possível acessar os dados do clima de uma cidade pesquisando-a pelo seu nome.
 > - Removi alguns arquivos do projeto que não eram mais utilizados.
 
-## O que pretendo melhorar:
+## Futuras melhorias:
 
-- Deixar o site responsivo.
-- Melhorar o design.
-- Permitir a escolha de linguagem no site.
-- Otimizar o código.
-- Encontrar um nome melhor para o projeto...
+- [ ] Deixar o site responsivo.
+- [ ] Melhorar o design.
+- [ ] Permitir a escolha de linguagem no site.
+- [x] Otimizar o código.
